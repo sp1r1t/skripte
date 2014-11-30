@@ -1,0 +1,6 @@
+#!/bin/sh
+
+voc=$1
+
+lynx -dump -nolist "http://dict.leo.org/ende?search=$voc" |  grep '\[ \]' | grep -i $1 | sed 's/   \[ \]    //' | sed 's/  /    <==>   /'
+ 

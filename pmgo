@@ -1,0 +1,18 @@
+#!/bin/bash
+
+chromium_running=`ps ax | grep -v grep | grep chromium`
+
+if [ "$chromium_running" != "" ]; then
+    notify-send "Chromium is running, not doing anything"
+    exit
+fi
+
+sudo setseccam off
+notify-send "seccam deactivated"
+brightness.sh 600
+chromium --incognito 2> /dev/null & 
+wait 
+echo "chromium should be closed now"
+sudo setseccam on
+notify-send "seccam activated"
+brightness.sh 3000

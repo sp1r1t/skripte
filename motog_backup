@@ -1,0 +1,11 @@
+# --- lftp backup script for moto g --- 
+
+# open connection
+open -u francis,francis -p 2221 192.168.66.172
+
+# backup pics
+mirror --only-missing DCIM/Camera ~/medien/pix/motog/Camera
+mirror --only-missing DCIM/Facebook ~/medien/pix/motog/Facebook
+mirror --only-missing WhatsApp/Media ~/medien/pix/motog/WhatsApp
+
+
