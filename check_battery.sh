@@ -1,6 +1,6 @@
 #!/bin/bash
 
-battery_level = `upower -d | grep percentage | head -1 | grep -o '[0-9]*'`
+battery_level=`upower -d | grep percentage | head -1 | grep -o '[0-9]*'`
 
 if [[ "$battery_level" -le 3 ]] 
     then

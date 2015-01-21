@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # quote file
-quotefile="$HOME/quotes.org"
+quotefile="$HOME/org/quotes.org"
 if ! [ -e $quotefile ]; then
     touch $quotefile
 fi
@@ -11,8 +11,11 @@ quote=`xclip -out -selection primary`
 
 # write quote
 echo -n "* " >> $quotefile
-echo $quote >> $quotefile
 if [ $# -ge 1 ]; then
-    echo "  -" $1 "-" >> $quotefile
+    echo $1 >> $quotefile
+else
+    echo "anonymous" >> $quotefile
 fi
+
+echo $quote >> $quotefile
 

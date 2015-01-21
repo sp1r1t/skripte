@@ -1,11 +1,10 @@
-# --- lftp backup script for moto g --- 
+#!/bin/bash
 
-# open connection
-open -u francis,francis -p 2221 192.168.66.172
+echo "starting backup"
+lftp -f ~/.bin/motog_backup.lftp
 
-# backup pics
-mirror --only-missing DCIM/Camera ~/medien/pix/motog/Camera
-mirror --only-missing DCIM/Facebook ~/medien/pix/motog/Facebook
-mirror --only-missing WhatsApp/Media ~/medien/pix/motog/WhatsApp
-
-
+if [ $? -ne 0 ]; then
+    echo "hmm, something somewhere went wrong. stay tuned spaceman"
+else
+    echo "all done, swim on sir"
+fi
