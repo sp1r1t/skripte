@@ -8,7 +8,7 @@ touch printfile
 echo "$quote" > printfile
 file="printfile"
 
-#scp $file pavianpredator:prints/
-scp $file jinn@pavi-wifi:prints/
-#ssh pavianpredator "lp prints/$1"
-ssh jinn@pavi-wifi "lp prints/$file"
+scp $file pavianpredator:prints/
+#scp $file jinn@pavi-wifi:prints/
+ssh pavianpredator "lp prints/$file"
+#ssh jinn@pavi-wifi "lp prints/$file"
