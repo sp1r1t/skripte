@@ -9,10 +9,10 @@ fi
 
 sudo setseccam off
 notify-send "seccam deactivated"
-brightness.sh 600
+#brightness.sh 600
 chromium --incognito 2> /dev/null & 
 wait 
 echo "chromium should be closed now"
 sudo setseccam on
 notify-send "seccam activated"
-brightness.sh 3000
+#brightness.sh 3000

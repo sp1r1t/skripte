@@ -2,6 +2,9 @@
 
 # persons
 num_persons = 3
+p1 = "Julian"
+p2 = "Alina"
+p3 = "Fuchs"
 
 # hauptmietzins
 total_rent_ex = 716.06
@@ -25,9 +28,9 @@ price_room_big = size_room_big * price_sqm
 price_room_sm = size_room_sm * price_sqm
 price_common_person = size_common_person * price_sqm
 
-jinn = price_room_sm + price_common_person + op_cost_person
-jakob = price_room_big + price_common_person + op_cost_person
-flo = price_room_big + price_common_person + op_cost_person
+p1_cost = price_room_big + price_common_person + op_cost_person
+p2_cost = price_room_big + price_common_person + op_cost_person
+p3_cost = price_room_sm + price_common_person + op_cost_person
 #luisa = price_room_big + price_common_person + op_cost_person
 #birgit = price_room_big / 2 + price_common_person + op_cost_person
 #daniel = price_room_big / 2 + price_common_person + op_cost_person
@@ -35,17 +38,17 @@ flo = price_room_big + price_common_person + op_cost_person
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "price square meter: " + repr(price_sqm)
-print "jinn: " + repr(jinn)
-print "jakob: " + repr(jakob)
-print "flo: " + repr(flo)
-print "total: " + repr(flo + jakob +  jinn)
+print p1 + ": " + repr(p1_cost)
+print p2 + ": " + repr(p2_cost)
+print p3 + ": " + repr(p3_cost)
+print "total: " + repr(p1_cost + p2_cost +  p3_cost)
 print ""
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
 interwebz = 26.15
-montana = 105
-verbund = 73.81
+montana = 127
+verbund = 62
 versicherung = 20.01
 total = interwebz + montana + verbund + versicherung
 
@@ -60,6 +63,6 @@ print ""
 
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-print "jinn: " + repr(jinn + total / num_persons)
-print "jakob: " + repr(jakob + total / num_persons)
-print "flo: " + repr(flo + total / num_persons)
+print p1 + ": " + repr(p1_cost + total / num_persons)
+print p2 + ": " + repr(p2_cost + total / num_persons)
+print p3 + ": " + repr(p3_cost + total / num_persons)

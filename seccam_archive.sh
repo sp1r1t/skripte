@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/spirit/medien/pix/seccam/archive
+cd $HOME/medien/pix/seccam/archive
 date=`date +%Y%m%d`
 
 # create todays directory if not present

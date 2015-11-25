@@ -7,4 +7,6 @@ if [[ "$battery_level" -le 3 ]]
     notify-send "Battery level is criticaly low, going to suspend."
     sleep 5
     systemctl suspend
+else
+    echo "battery level is" $battery_level
 fi

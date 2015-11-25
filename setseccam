@@ -15,7 +15,7 @@ fi
 if [ "$1" == "on" ]; then
     echo """SHELL=/bin/sh                                                                                
 
-* * * * * spirit /home/spirit/.bin/sec_cam.sh""" > /etc/cron.d/seccam
+* * * * * jinn /home/jinn/.bin/sec_cam.sh""" > /etc/cron.d/seccam
     exit
 fi
 
