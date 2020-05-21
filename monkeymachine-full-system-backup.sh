@@ -29,7 +29,7 @@ fi
 
 # do backup
 # (needs root to preserve file ownerships)
-sudo rdiff-backup -v5 \
+sudo rdiff-backup --tempdir "$LOCALDIR/home/jinn/tmp" -v5 \
      --exclude "$LOCALDIR/dev" \
      --exclude "$LOCALDIR/proc" \
      --exclude "$LOCALDIR/sys" \
