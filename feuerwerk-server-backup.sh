@@ -29,6 +29,7 @@ fi
 rdiff-backup --tempdir /home/$USER/tmp -v5 \
              --include "/home/$USER/**/7bit/**" \
              --include "/home/$USER/.ssh" \
+             --include "/home/$USER/Dropbox" \
              --exclude '**' \
              /home/$USER/ $SERVERUSER@$BACKUPSERVER::backup/
 RDIFFRET=$?
